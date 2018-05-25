@@ -70,6 +70,7 @@ class App extends React.Component {
           textAlign: "center"
         }}
       >
+        TEST
         <Toggle
           stateReducer={this.toggleReducer}
           onToggle={this.handleToggle}
