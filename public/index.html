@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+    manifest.json provides metadata used when your web app is added to the
+    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+  -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!--
+    Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+  <title>React App</title>
+  
+</head>
+<body>
+  <style>
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		font-family: 'Antic Slab', serif;
+	}
+
+	hr {
+		width: 100%;
+	}
+	/*
+toggle styles copied and modified from
+https://codepen.io/mallendeo/pen/eLIiG
+by Mauricio Allende (https://mallendeo.com/)
+ */
+
+	.toggle-btn {
+		display: inline-block;
+		outline: 0;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		background: #fbfbfb;
+		border-radius: 2em;
+		padding: 2px;
+		transition: all 0.4s ease;
+		border: 1px solid #e8eae9;
+	}
+
+	.toggle-btn:focus::after,
+	.toggle-btn:active::after {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+		0 4px 0 rgba(0, 0, 0, 0.08),
+		inset 0px 0px 0px 1.5px #9c9c9c;
+	}
+
+	.toggle-btn::after {
+		left: 0;
+		position: relative;
+		display: block;
+		content: '';
+		width: 50%;
+		height: 100%;
+		border-radius: 2em;
+		background: #fbfbfb;
+		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+		padding 0.3s ease, margin 0.3s ease;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+		0 4px 0 rgba(0, 0, 0, 0.08);
+	}
+
+	.toggle-btn.toggle-btn-on::after {
+		left: 50%;
+	}
+
+	.toggle-btn.toggle-btn-on {
+		background: #86d993;
+	}
+
+	.toggle-btn.toggle-btn-on:active {
+		box-shadow: none;
+	}
+
+	.toggle-btn.toggle-btn-on:active::after {
+		margin-left: -0.8em;
+	}
+
+	.toggle-btn:active::after {
+		padding-right: 0.8em;
+	}
+
+	.toggle-input {
+		display: none;
+	}
+</style>
+<div id="root"></div>
+  <!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
+</body>
+</html>
